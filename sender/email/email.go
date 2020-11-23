@@ -47,8 +47,8 @@ func (e *Email) Send(message io.Reader, opt ...fw.Option) (err error) {
 		Bcc:     opts.bcc,
 		Cc:      opts.cc,
 	}
-	if opts.attach != nil {
-		if _, err = mail.Attach(opts.attach.fd, opts.attach.filename, ""); err != nil {
+	if opts.attachment != nil {
+		if _, err = mail.Attach(opts.attachment.fd, opts.attachment.filename, ""); err != nil {
 			return
 		}
 	}

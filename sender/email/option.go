@@ -19,7 +19,7 @@ type options struct {
 	bcc         []string
 	cc          []string
 	subject     string
-	attach      *attachment
+	attachment  *attachment
 
 	f func(*options)
 }
@@ -137,7 +137,7 @@ type attachment struct {
 func Attachment(fd io.Reader, filename string) fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.attach = &attachment{
+			o.attachment = &attachment{
 				filename: filename,
 				fd:       fd,
 			}
