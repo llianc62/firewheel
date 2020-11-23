@@ -1,5 +1,5 @@
 // Package firewheel defines a message delivery model, provides various platform
-// warpped sdk, such as Mail, DingTalk, etc.
+// warpped sdk, such as Mail, DingTalk, WeChat and etc.
 package firewheel
 
 import (
