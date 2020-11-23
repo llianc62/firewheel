@@ -15,10 +15,12 @@ type MSender struct {
 	senders []fw.Sender
 }
 
+// Setup adds sender in.
 func (ms *MSender) Setup(senders ...fw.Sender) {
 	ms.senders = append(ms.senders, senders...)
 }
 
+// Send invokes all senders sends message.
 func (ms *MSender) Send(message io.Reader, opt ...fw.Option) (err error) {
 	for _, sender := range ms.senders {
 		if err = sender.Send(message, opt...); err != nil {

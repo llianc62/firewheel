@@ -30,8 +30,6 @@ func ExampleEmail_Send_text() {
 	); err != nil {
 		log.Fatal(err)
 	}
-	// Output:
-	//
 }
 
 func ExampleEmail_Send_html() {
@@ -56,6 +54,4 @@ func ExampleEmail_Send_html() {
 	); err != nil {
 		log.Fatal(err)
 	}
-	// Output:
-	//
 }

@@ -9,7 +9,7 @@ packages := $(shell go list ./...|grep -v /vendor/)
 
 test: check
 	@$(GO) test -race $(packages) -v -coverprofile=.coverage.out
-	@$(GO) tool cover -func=.coverage.out
+	@$(GO) tool cover -func=.coverage.out | tee coverage.txt
 	@rm -f .coverage.out
 
 check:
