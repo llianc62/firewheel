@@ -105,7 +105,7 @@ func From(from string) fw.Option {
 func To(to ...string) fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.to = to
+			o.to = append(o.to, to...)
 		},
 	}
 }
@@ -114,7 +114,7 @@ func To(to ...string) fw.Option {
 func Cc(cc ...string) fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.cc = cc
+			o.cc = append(o.cc, cc...)
 		},
 	}
 }
@@ -123,7 +123,7 @@ func Cc(cc ...string) fw.Option {
 func Bcc(bcc ...string) fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.bcc = bcc
+			o.bcc = append(o.bcc, bcc...)
 		},
 	}
 }

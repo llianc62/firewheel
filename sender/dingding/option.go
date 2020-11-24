@@ -64,7 +64,7 @@ func MessageMode(mode MsgMode) fw.Option {
 func AtMobiles(atMobiles ...string) fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.atMobiles = atMobiles
+			o.atMobiles = append(o.atMobiles, atMobiles...)
 		},
 	}
 }
