@@ -14,7 +14,7 @@ import (
 
 const (
 	defaultPoolSize = 4
-	defaultTimeout  = time.Second * 1
+	defaultTimeout  = 30 * time.Second
 )
 
 // Email implements Sender which sends email.

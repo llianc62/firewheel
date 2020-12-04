@@ -91,7 +91,7 @@ there are some tips:
   ```go
   sender.Send(
   	strings.NewReader("test message"),
-    	email.SubjectFunc("new email test"),
+  	email.Subjectc("new email test"),
   )
   ```
 
