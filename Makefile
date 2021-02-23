@@ -8,9 +8,8 @@ packages := $(shell go list ./...|grep -v /vendor/)
 .PHONY: check test lint
 
 test: check
-	@$(GO) test -race $(packages) -v -coverprofile=.coverage.out
-	@$(GO) tool cover -func=.coverage.out | tee coverage.txt
-	@rm -f .coverage.out
+	@$(GO) test -race $(packages) -v -coverprofile=coverage.txt -covermode=atomic
+	@$(GO) tool cover -func=coverage.txt
 
 check:
 	@$(GO) vet -composites=false $(packages)

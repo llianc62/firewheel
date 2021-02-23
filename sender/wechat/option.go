@@ -6,6 +6,9 @@ import (
 	fw "github.com/LiangXianSen/firewheel"
 )
 
+// WeChat group robot api doc:
+// https://work.weixin.qq.com/api/doc/90000/90136/91770
+
 // MsgType indicates message format.
 type MsgType int
 

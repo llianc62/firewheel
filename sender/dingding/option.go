@@ -4,6 +4,9 @@ import (
 	fw "github.com/LiangXianSen/firewheel"
 )
 
+// DingTalk group robot api doc:
+// https://developers.dingtalk.com/document/app/develop-enterprise-internal-robots
+
 // MsgMode indicates message format.
 type MsgMode int
 
@@ -70,10 +73,10 @@ func AtMobiles(atMobiles ...string) fw.Option {
 }
 
 // IsAtAll sets isAtAll.
-func IsAtAll(isAtAll bool) fw.Option {
+func IsAtAll() fw.Option {
 	return &options{
 		f: func(o *options) {
-			o.isAtAll = isAtAll
+			o.isAtAll = true
 		},
 	}
 }
